@@ -17,7 +17,7 @@ public class HelloRestController1 {
     }
 
     //UC-03
-    @GetMapping("/param")
+    @GetMapping("/param/{name}")
     public String sayHello3(@PathVariable String name){
         return "Hello "+ name + " from BridgeLabz";
     }
