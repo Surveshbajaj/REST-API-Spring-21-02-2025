@@ -1,9 +1,6 @@
 package com.bridgelabz.hellofrombridgelabz.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/hello")
@@ -19,4 +16,9 @@ public class HelloRestController1 {
         return "Hello "+ name + " from BridgeLabz";
     }
 
+    //UC-03
+    @GetMapping("/param")
+    public String sayHello3(@PathVariable String name){
+        return "Hello "+ name + " from BridgeLabz";
+    }
 }
